@@ -15,7 +15,6 @@ const InputBook = ({addNewBook}) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         addNewBook(newBook, bookAuthor)
-        console.log('submitted');
     }
     return <>
     <form className="form">
