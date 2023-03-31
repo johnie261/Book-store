@@ -1,70 +1,125 @@
-# Getting Started with Create React App
+# BOOK STORE
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+A book store website displays a list of books, add new book and remove selected book.
 
-### `npm start`
+# 🛠 Built With
+### Tech Stack:
+- HTML. 
+- CSS.
+- Javascript ES6.
+- React
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Server:
+- local.
+### Database:
+- N/A.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Key Features:
+- The project uses React and Redux
+- CSS3.
 
-### `npm test`
+## 🚀 Live Demo <a name="live-demo"></a>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+> Here you can see the live demo of my project:
 
-### `npm run build`
+Currently not available
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<!-- - [Live Demo Link](https://johnie261.github.io/to-do-list/dist/) -->
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# 💻 Getting Started:
+### To get a local copy up and running, follow these steps:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Prerequisites:
+### In order to run this project you need:
 
-### `npm run eject`
+ - A PC with window, linux and mac OS operating systems.
+ 
+ - Installed Git.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+ - Have knowledge of Webpack, Git and GitHub.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+ - An internet connection 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+ - A browser such as chrome, Firefox and Internet explorer.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+ - Have a code editor
 
-## Learn More
+# Setup:
+Clone this repository to your desired folder:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Clone this repository to your desired folder.
+- Run: git clone + 'link copied' and make sure the file is copied.
+- Open the file with a code edi
 
-### Code Splitting
+# Install:
+### Install this project with:
+- Git.
+- Github.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Usage:
+### To run the project, execute the following command:
+To run the project, execute the following command:
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- To run the project you need to make use of git commands such as git add , git pull and git command
 
-### Making a Progressive Web App
+# Run tests:
+### To run tests, run the following command:
+ 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Download all the dependencies run:
+```
+npm install
+```
+Track HTML linter errors run:
+```
+npx hint .
+```
+Track CSS linter errors run:
+```
+npx stylelint "**/*.{css,scss}"
+```
+Track JavaScript linter errors run:
+```
+npx eslint "**/*.{js,jsx}"
+```
+To run the project:
 
-### Advanced Configuration
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+npm start
+```
 
-### Deployment
+# Deployment:
+### You can deploy this project using:
+- Github pages.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+# 👥 Authors:
+### 👤 Johnie:
+- GitHub: [@githubhandle](https://github.com/johnie261)
+- Twitter: [@twitterhandle](https://twitter.com/njorogejohnie)
+- LinkedIn: [LinkedIn]([https://linkedin.com/in/linkedinhandle](https://www.linkedin.com/in/john-njoroge-19b6a4245/))
 
-### `npm run build` fails to minify
+# 🔭 Future Features:
+- Use Redux in React components.
+- Add reducers and actions.
+- Fetching books from API.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# 🤝 Contributing:
+Contributions, issues, and feature requests are welcome!
+Feel free to check the issues page.
+
+# ⭐️ Show your support
+If you like this project kindly send to me an e-mail expressing it, it would make my day and fuel my motivation.
+
+# 🙏 Acknowledgments:
+I would like to thank Microverse team for this journey.
+
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./MIT.md) licensed
