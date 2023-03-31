@@ -7,14 +7,14 @@ import BookNav from './components/BookNav';
 function App() {
   return (
     <>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<BookNav />}>
-          <Route index element={<Books />} />
-          <Route path="category" element={<Category />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<BookNav />}>
+            <Route index element={<Books />} />
+            <Route path="category" element={<Category />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
