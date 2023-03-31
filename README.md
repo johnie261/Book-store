@@ -99,9 +99,9 @@ npm start
 
 # 👥 Authors:
 ### 👤 Johnie:
-- GitHub: [@githubhandle](https://github.com/johnie261)
-- Twitter: [@twitterhandle](https://twitter.com/njorogejohnie)
-- LinkedIn: [LinkedIn]([https://linkedin.com/in/linkedinhandle](https://www.linkedin.com/in/john-njoroge-19b6a4245/))
+- GitHub: [github](https://github.com/johnie261)
+- Twitter: [twitter](https://twitter.com/njorogejohnie)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/john-njoroge-19b6a4245/)
 
 # 🔭 Future Features:
 - Use Redux in React components.
