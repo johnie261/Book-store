@@ -9,7 +9,6 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -39,22 +38,10 @@
 - Javascript ES6.
 - React
 
-### Server:
-- local.
-### Database:
-- N/A.
-
 ### Key Features <a name="key-features"></a>
 - The project uses React and Redux
 - CSS3.
 
-## 🚀 Live Demo <a name="live-demo"></a>
-
-> Here you can see the live demo of my project:
-
-Currently not available
-
-<!-- - [Live Demo Link](https://johnie261.github.io/to-do-list/dist/) -->
 
 ## 💻 Getting Started:
  To get a local copy up and running, follow these steps:
@@ -65,6 +52,8 @@ Currently not available
  - A PC with window, linux and mac OS operating systems.
  
  - Installed Git.
+ 
+ - Installed Node.js.
 
  - Have knowledge of Webpack, Git and GitHub.
 
@@ -75,55 +64,32 @@ Currently not available
  - Have a code editor
 
 ### Setup:
-Clone this repository to your desired folder:
-
-
-- Clone this repository to your desired folder.
-- Run: git clone + 'link copied' and make sure the file is copied.
-- Open the file with a code edi
+```
+git clone https://github.com/johnie261/Book-store.git
+cd Book-store
+```
 
 ### Install:
- Install this project with:
-- Git.
-- Github.
-
-### Usage:
- To run the project, execute the following command:
-To run the project, execute the following command:
-
-
-- To run the project you need to make use of git commands such as git add , git pull and git command
-
-### Run tests:
- To run tests, run the following command:
- 
-
-Download all the dependencies run:
 ```
 npm install
 ```
-Track HTML linter errors run:
-```
-npx hint .
-```
-Track CSS linter errors run:
-```
-npx stylelint "**/*.{css,scss}"
-```
-Track JavaScript linter errors run:
-```
-npx eslint "**/*.{js,jsx}"
-```
-To run the project:
+
+### Usage:
+ ```
+ npm start
+ ```
+
+### Run tests:
+
 
 ```
-
-npm start
+npm test
 ```
 
 ### Deployment:
- You can deploy this project using:
-- Github pages.
+```
+npm run build
+```
 
 ## 👥 Authors <a name="authors"></a>
 👤 **JOHNIE NJOROGE**
