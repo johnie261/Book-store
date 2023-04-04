@@ -52,6 +52,8 @@
  - A PC with window, linux and mac OS operating systems.
  
  - Installed Git.
+ 
+ - Installed Node.js.
 
  - Have knowledge of Webpack, Git and GitHub.
 
