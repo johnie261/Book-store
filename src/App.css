@@ -48,8 +48,14 @@
 }
 
 .author {
-  color: #4386bf;
   font-size: 0.9rem;
+}
+
+.btn-remove {
+  color: #4386bf;
+  background-color: #fff;
+  margin-bottom: 0.5rem;
+  border: none;
 }
 
 .form {
