@@ -69,11 +69,6 @@ const bookSlice = createSlice({
       .addCase(getBookItems.pending, (state) => {
         state.isLoading = true;
       })
-    /*      .addCase(getBookItems.fulfilled, (state, action) => {
-        state.isLoading = false;
-        state.bookItems = action.payload;
-        console.log(action.payload);
-        }) */
 
       .addCase(getBookItems.fulfilled, (state, action) => {
         // console.log(action.payload);
@@ -84,7 +79,7 @@ const bookSlice = createSlice({
           }),
         );
 
-        console.log(newBook);
+        // console.log(newBook);
         return { ...state, bookItems: newBook };
       })
 
@@ -96,13 +91,8 @@ const bookSlice = createSlice({
       .addCase(createNewBook.pending, (state) => {
         state.isLoading = true;
       })
-      .addCase(createNewBook.fulfilled, (state, action) => {
-        console.log(action.payload.item_id);
-        state.bookItems.push({
-          item_id: action.payload.item_id,
-          title: action.payload.title,
-          author: action.payload.author,
-        });
+      .addCase(createNewBook.fulfilled, (state) => {
+        state.isLoading = false;
       })
       .addCase(createNewBook.rejected, (state) => {
         state.isLoading = false;
@@ -113,12 +103,9 @@ const bookSlice = createSlice({
         state.isLoading = true;
       })
       .addCase(removeBookItem.fulfilled, (state, { payload }) => {
-        // state.isLoading = false;
-        //  state.bookItems = payload;
-        // state.bookItems = state.bookItems.filter((item) => item.id !== payload);
-        // ...state,
-        // isLoading: false,
-        state.bookItems = state.bookItems.filter((item) => item.id !== payload);
+        console.log(payload.id);
+        // state.bookItems = state.bookItems.filter((item) => item.id !== payload.id);
+        state.isLoading = false;
       })
       .addCase(removeBookItem.rejected, (state, action) => ({
         ...state,

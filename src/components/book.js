@@ -3,7 +3,7 @@ import { getBookItems, removeBookItem } from '../redux/book/bookSlice';
 
 /* eslint-disable react/prop-types */
 const Book = ({ itemId, title, author }) => {
-  // console.log(itemId);
+  // console.log(title);
   const dispatch = useDispatch();
   const URL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/';
 
@@ -12,6 +12,7 @@ const Book = ({ itemId, title, author }) => {
       .then(() => {
         dispatch(getBookItems(URL));
       });
+    console.log('removed');
   };
 
   return (
