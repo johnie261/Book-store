@@ -1,9 +1,18 @@
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../redux/book/bookSlice';
+import PropTypes from 'prop-types';
+import { getBookItems, removeBookItem } from '../redux/book/bookSlice';
 
-/* eslint-disable react/prop-types */
-const Book = ({ id, title, author }) => {
+const Book = ({ itemId, title, author }) => {
   const dispatch = useDispatch();
+  const URL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/';
+
+  const handleRemove = () => {
+    dispatch(removeBookItem(itemId))
+      .then(() => {
+        dispatch(getBookItems(URL));
+      });
+  };
+
   return (
     <section className="book-container">
       <div className="book-details">
@@ -13,7 +22,7 @@ const Book = ({ id, title, author }) => {
           <button
             type="button"
             className="btn-remove"
-            onClick={() => dispatch(removeBook(id))}
+            onClick={() => handleRemove()}
           >
             Remove
           </button>
@@ -22,4 +31,11 @@ const Book = ({ id, title, author }) => {
     </section>
   );
 };
+
+Book.propTypes = {
+  title: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  itemId: PropTypes.string.isRequired,
+};
+
 export default Book;
