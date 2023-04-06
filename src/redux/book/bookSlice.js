@@ -1,14 +1,11 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-// import bookItems from './bookItems';
-// import bookItems from './bookItems';
 
 const initialState = {
   bookItems: [],
   isLoading: true,
   error: null,
 };
-// console.log(initialState);
 
 const appId = 'fsISoTleXrIiKHYrh9Cq';
 const URL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/';
@@ -20,7 +17,6 @@ export const getBookItems = createAsyncThunk('book/getBookItems',
   async (thunkAPI) => {
     try {
       const res = await axios.get(`${URL + appId}/books`);
-      // console.log(res.data);
       return res.data;
     } catch (error) {
       return thunkAPI.rejectWithValue('something went wrong');
@@ -28,15 +24,12 @@ export const getBookItems = createAsyncThunk('book/getBookItems',
   });
 
 export const createNewBook = createAsyncThunk('book/createNewBook',
-  async (data) => {
-    // console.log(data);
+  async (data, thunkAPI) => {
     try {
       const res = await axios.post(`${URL + appId}/books`, data, { headers });
       return res.data;
     } catch (error) {
-      return console.log(error);
-    //  console.log(error);
-    //  return thunkAPI.rejectWithValue('something went wrong');
+      return thunkAPI.rejectWithValue('something went wrong');
     }
   });
 
@@ -53,60 +46,44 @@ export const removeBookItem = createAsyncThunk('book/removeBookItem',
 const bookSlice = createSlice({
   name: 'book',
   initialState,
-
   reducers: {},
-  /*
-    removeBook: (state, { payload }) => {
-      state.bookItems = state.bookItems.filter((item) => item.id !== payload);
-    },
-  },
-*/
-
   extraReducers: (builder) => {
     builder
-    // get book
-    /* eslint-disable no-param-reassign */
-      .addCase(getBookItems.pending, (state) => {
-        state.isLoading = true;
-      })
-
+    // get book from API
+      .addCase(getBookItems.pending, (state) => ({
+        ...state,
+      }))
       .addCase(getBookItems.fulfilled, (state, action) => {
-        // console.log(action.payload);
         const newBook = Object.entries(action.payload).map(
           (book) => ({
             item_id: book[0],
             ...book[1][0],
           }),
         );
-
-        // console.log(newBook);
         return { ...state, bookItems: newBook };
       })
-
-      .addCase(getBookItems.rejected, (state, action) => {
-        state.isLoading = false;
-        state.error = action.payload;
-      })
-    // Add new book
-      .addCase(createNewBook.pending, (state) => {
-        state.isLoading = true;
-      })
-      .addCase(createNewBook.fulfilled, (state) => {
-        state.isLoading = false;
-      })
-      .addCase(createNewBook.rejected, (state) => {
-        state.isLoading = false;
-        // state.error = action.payload;
-      })
-    // remove book
-      .addCase(removeBookItem.pending, (state) => {
-        state.isLoading = true;
-      })
-      .addCase(removeBookItem.fulfilled, (state, { payload }) => {
-        console.log(payload.id);
-        // state.bookItems = state.bookItems.filter((item) => item.id !== payload.id);
-        state.isLoading = false;
-      })
+      .addCase(getBookItems.rejected, (state, action) => ({
+        ...state,
+        error: action.payload,
+      }))
+    // Add new book to API
+      .addCase(createNewBook.pending, (state) => ({
+        ...state,
+      }))
+      .addCase(createNewBook.fulfilled, (state) => ({
+        ...state,
+      }))
+      .addCase(createNewBook.rejected, (state, action) => ({
+        ...state,
+        error: action.payload,
+      }))
+    // remove book from API
+      .addCase(removeBookItem.pending, (state) => ({
+        ...state,
+      }))
+      .addCase(removeBookItem.fulfilled, (state) => ({
+        ...state,
+      }))
       .addCase(removeBookItem.rejected, (state, action) => ({
         ...state,
         isLoading: false,

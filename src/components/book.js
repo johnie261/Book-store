@@ -2,17 +2,16 @@ import { useDispatch } from 'react-redux';
 import { getBookItems, removeBookItem } from '../redux/book/bookSlice';
 
 /* eslint-disable react/prop-types */
-const Book = ({ itemId, title, author }) => {
-  // console.log(title);
+/* eslint-disable camelcase */
+const Book = ({ item_id, title, author }) => {
   const dispatch = useDispatch();
   const URL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/';
 
   const handleRemove = () => {
-    dispatch(removeBookItem({ itemId }))
+    dispatch(removeBookItem(item_id))
       .then(() => {
         dispatch(getBookItems(URL));
       });
-    console.log('removed');
   };
 
   return (
@@ -20,12 +19,11 @@ const Book = ({ itemId, title, author }) => {
       <div className="book-details">
         <h1 className="title">{title}</h1>
         <p className="author">{author}</p>
-        <h2>john</h2>
         <div>
           <button
             type="button"
             className="btn-remove"
-            onClick={handleRemove}
+            onClick={() => handleRemove()}
           >
             Remove
           </button>
