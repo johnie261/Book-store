@@ -1,14 +1,13 @@
 import { useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
 import { getBookItems, removeBookItem } from '../redux/book/bookSlice';
 
-/* eslint-disable react/prop-types */
-/* eslint-disable camelcase */
-const Book = ({ item_id, title, author }) => {
+const Book = ({ itemId, title, author }) => {
   const dispatch = useDispatch();
   const URL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/';
 
   const handleRemove = () => {
-    dispatch(removeBookItem(item_id))
+    dispatch(removeBookItem(itemId))
       .then(() => {
         dispatch(getBookItems(URL));
       });
@@ -32,4 +31,11 @@ const Book = ({ item_id, title, author }) => {
     </section>
   );
 };
+
+Book.propTypes = {
+  title: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  itemId: PropTypes.string.isRequired,
+};
+
 export default Book;

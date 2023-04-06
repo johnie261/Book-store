@@ -13,12 +13,17 @@ const Books = () => {
   }, []);
 
   return (
-    /* eslint-disable react/jsx-props-no-spreading */
     <main className="main">
       {Object.keys(bookItems).length > 0 ? (
         <ul className="book-box">
           {Object.keys(bookItems).map((book) => (
-            <Book key={book} {...bookItems[book]} />
+            <Book
+              key={book}
+              itemId={bookItems[book].item_id}
+              title={bookItems[book].title}
+              author={bookItems[book].author}
+              category={bookItems[book].category}
+            />
           ))}
         </ul>
       ) : (
