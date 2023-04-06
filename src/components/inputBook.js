@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import { addBook } from '../redux/book/bookSlice';
+import { createNewBook, getBookItems } from '../redux/book/bookSlice';
 
 const InputBook = () => {
   const dispatch = useDispatch();
@@ -23,12 +23,17 @@ const InputBook = () => {
     if (newBook.trim() === '' || bookAuthor.trim() === '') {
       return;
     }
-    dispatch(addBook({
-      id: uuidv4(),
+    dispatch(createNewBook({
+      item_id: uuidv4(),
       title: newBook,
       author: bookAuthor,
-    }));
+      category: 'undefined',
+    }))
+      .then(() => {
+        dispatch(getBookItems(URL));
+      });
   };
+
   return (
     <>
       <form className="form">
