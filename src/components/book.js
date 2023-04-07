@@ -20,6 +20,7 @@ const Book = ({ itemId, title, author }) => {
         <p className="author">{author}</p>
         <div className="btn-container">
           <button type="button" className="btnn btn-remove">Comment</button>
+          <span className="horizon-border" />
           <button
             type="button"
             className="btnn btn-remove"
@@ -27,6 +28,7 @@ const Book = ({ itemId, title, author }) => {
           >
             Remove
           </button>
+          <span className="horizon-border" />
           <button type="button" className="btnn btn-remove">Edit</button>
         </div>
       </div>
@@ -38,7 +40,7 @@ const Book = ({ itemId, title, author }) => {
           </svg>
         </div>
         <div className="progress-percent">
-          <h3 className="percent"> 77% </h3>
+          <p className="percent"> 77% </p>
           <p className="complete">completed</p>
         </div>
       </div>

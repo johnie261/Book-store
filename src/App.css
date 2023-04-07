@@ -1,32 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap');
+
 body {
   background-color: rgba(0, 0, 0, 0.05);
+  font-family: robotoSlab
+;
   overflow-x: hidden;
 }
 
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   background-color: #fff;
   border-bottom: 1px solid #e8e8e8;
   margin: -0.5rem;
   margin-bottom: 1.5rem;
 }
 
+.header-container {
+  width: 81%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 6rem;
+  margin-left: 1.7rem;
+}
+
 .header-left {
   display: flex;
   align-items: center;
-}
-
-.profile {
-  margin-right: 5rem;
+  font-family: Montserrat;
 }
 
 .header-title {
-  margin-left: 7rem;
   color: #0290ff;
   font-weight: bold;
-  font-size: 1.8rem;
+  font-size: 1.9rem;
 }
 
 .link {
@@ -55,7 +64,8 @@ body {
 .book-container {
   display: flex;
   margin-bottom: 1rem;
-  width: 70%;
+  width: 80%;
+  border-radius: .5rem;
   padding-left: 1.7rem;
   border: solid 1px #e8e8e8;
   background-color: #fff;
@@ -68,31 +78,41 @@ body {
 .title {
   color: #121212;
   font-size: 1.4rem;
-  margin-bottom: 0.5rem;
+  margin: 2rem 0 -1rem 0;
   text-transform: capitalize;
+  font-family: RobotoSlab;
+  font-weight: bold;
+  letter-spacing: -0.2px;
 }
 
 .author {
   font-size: 1rem;
   color: #4386bf;
   text-transform: capitalize;
+  font-family: RobotoSlab;
+  font-weight: 300;
 }
 
 .btn-container {
   display: flex;
   justify-content: start;
   width: 22%;
-}
-
-.btnn {
-  border: none;
+  gap: 1rem;
 }
 
 .btn-remove {
   color: #4386bf;
   background-color: #fff;
-  margin-bottom: 0.5rem;
-  border-right: 1px solid #4386bf;
+  margin-bottom: 1.5rem;
+  border: 1px solid;
+  margin-left: -.5rem;
+  border: none;
+}
+
+.horizon-border {
+  width: 0.125rem;
+  height: 1.3rem;
+  border: solid 1px #e8e8e8;
 }
 
 .percentage {
@@ -133,8 +153,9 @@ body {
 }
 
 .percent {
-  font-size: 1.5rem;
   color: #121212;
+  font-family: Montserrat;
+  font-size: 2rem;
 }
 
 .complete {
@@ -156,7 +177,12 @@ body {
 
 .current {
   width: 150%;
-  color: #908e8e;
+  margin-top: 2rem;
+  opacity: 0.5;
+  font-family: RobotoSlab;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #121212
 }
 
 .chapter {
@@ -164,21 +190,30 @@ body {
   margin-top: -0.7rem;
   color: #121212;
   font-size: 1rem;
+  font-family: RobotoSlab;
+  font-weight: 300;
+  letter-spacing: -0.4px;
 }
 
 .btn-chapter {
-  border-radius: 0.5rem;
+  border-radius: 3px;
   padding: 0.6rem 1rem;
   margin-bottom: 1.5rem;
   width: 130%;
   background-color: #0290ff;
   color: #fff;
   border: solid 1px #e8e8e8;
+  font-family: RobotoSlab;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  text-align: center;
 }
 
 .form {
   padding-left: 1.7rem;
-  width: 70%;
+  width: 80%;
+  margin-bottom: 15rem;
 }
 
 .vertical-line {
@@ -190,6 +225,11 @@ body {
 
 .heading {
   color: #908e8e;
+  font-family: Montserrat;
+  font-size: 1.25rem;
+  font-weight: bold;
+  letter-spacing: -0.18px;
+  color: #888;
 }
 
 .input {
@@ -198,6 +238,9 @@ body {
   font-size: 1rem;
   padding: 1rem;
   border: solid 1px #e8e8e8;
+  font-family: Montserrat;
+  letter-spacing: -0.15px;
+  color: #121212;
 }
 
 .input-a {
@@ -205,6 +248,9 @@ body {
   font-size: 1rem;
   padding: 1rem;
   border: solid 1px #e8e8e8;
+  font-family: Montserrat;
+  letter-spacing: -0.15px;
+  color: #121212;
 }
 
 .btn {
@@ -215,4 +261,11 @@ body {
   background-color: #0290ff;
   color: #fff;
   border: solid 1px #e8e8e8;
+  font-family: RobotoSlab;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  text-align: center;
+  border-radius: 3px;
 }
