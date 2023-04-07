@@ -36,6 +36,7 @@ const InputBook = () => {
   return (
     <>
       <form className="form">
+        <div className="vertical-line" />
         <h1 className="heading">ADD NEW BOOK</h1>
         <div className="inputs">
           <input type="text" value={newBook} onChange={handleChange} placeholder="Book title" className="input" required />
