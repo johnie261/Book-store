@@ -2,8 +2,6 @@
 
 body {
   background-color: rgba(0, 0, 0, 0.05);
-  font-family: robotoSlab
-;
   overflow-x: hidden;
 }
 
@@ -29,7 +27,7 @@ body {
 .header-left {
   display: flex;
   align-items: center;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
 }
 
 .header-title {
@@ -65,7 +63,7 @@ body {
   display: flex;
   margin-bottom: 1rem;
   width: 80%;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   padding-left: 1.7rem;
   border: solid 1px #e8e8e8;
   background-color: #fff;
@@ -80,7 +78,7 @@ body {
   font-size: 1.4rem;
   margin: 2rem 0 -1rem 0;
   text-transform: capitalize;
-  font-family: RobotoSlab;
+  font-family: 'Roboto Slab', sans-serif;
   font-weight: bold;
   letter-spacing: -0.2px;
 }
@@ -89,7 +87,7 @@ body {
   font-size: 1rem;
   color: #4386bf;
   text-transform: capitalize;
-  font-family: RobotoSlab;
+  font-family: 'Roboto Slab', sans-serif;
   font-weight: 300;
 }
 
@@ -104,8 +102,7 @@ body {
   color: #4386bf;
   background-color: #fff;
   margin-bottom: 1.5rem;
-  border: 1px solid;
-  margin-left: -.5rem;
+  margin-left: -0.5rem;
   border: none;
 }
 
@@ -154,7 +151,7 @@ body {
 
 .percent {
   color: #121212;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-size: 2rem;
 }
 
@@ -179,10 +176,10 @@ body {
   width: 150%;
   margin-top: 2rem;
   opacity: 0.5;
-  font-family: RobotoSlab;
+  font-family: 'Roboto Slab', sans-serif;
   font-size: 1rem;
   font-weight: 300;
-  color: #121212
+  color: #121212;
 }
 
 .chapter {
@@ -190,7 +187,7 @@ body {
   margin-top: -0.7rem;
   color: #121212;
   font-size: 1rem;
-  font-family: RobotoSlab;
+  font-family: 'Roboto Slab', sans-serif;
   font-weight: 300;
   letter-spacing: -0.4px;
 }
@@ -203,7 +200,7 @@ body {
   background-color: #0290ff;
   color: #fff;
   border: solid 1px #e8e8e8;
-  font-family: RobotoSlab;
+  font-family: 'Roboto Slab', sans-serif;
   font-size: 1rem;
   font-weight: 300;
   letter-spacing: 0.5px;
@@ -224,8 +221,7 @@ body {
 }
 
 .heading {
-  color: #908e8e;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-size: 1.25rem;
   font-weight: bold;
   letter-spacing: -0.18px;
@@ -238,7 +234,7 @@ body {
   font-size: 1rem;
   padding: 1rem;
   border: solid 1px #e8e8e8;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   letter-spacing: -0.15px;
   color: #121212;
 }
@@ -248,7 +244,7 @@ body {
   font-size: 1rem;
   padding: 1rem;
   border: solid 1px #e8e8e8;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   letter-spacing: -0.15px;
   color: #121212;
 }
@@ -257,11 +253,10 @@ body {
   padding: 1rem;
   width: 15%;
   margin-left: 2rem;
-  border-radius: 0.5rem;
   background-color: #0290ff;
   color: #fff;
   border: solid 1px #e8e8e8;
-  font-family: RobotoSlab;
+  font-family: 'Roboto Slab', sans-serif;
   font-size: 1rem;
   text-transform: uppercase;
   font-weight: bold;
