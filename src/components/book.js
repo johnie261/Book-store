@@ -18,14 +18,36 @@ const Book = ({ itemId, title, author }) => {
       <div className="book-details">
         <h1 className="title">{title}</h1>
         <p className="author">{author}</p>
-        <div>
+        <div className="btn-container">
+          <button type="button" className="btnn btn-remove">Comment</button>
           <button
             type="button"
-            className="btn-remove"
+            className="btnn btn-remove"
             onClick={() => handleRemove()}
           >
             Remove
           </button>
+          <button type="button" className="btnn btn-remove">Edit</button>
+        </div>
+      </div>
+      <div className="percentage">
+        <div className="progress">
+          <svg className="wheel">
+            <circle className="bg" cx="40" cy="40" r="35" />
+            <circle className="meter" cx="40" cy="40" r="35" />
+          </svg>
+        </div>
+        <div className="progress-percent">
+          <h3 className="percent"> 77% </h3>
+          <p className="complete">completed</p>
+        </div>
+      </div>
+      <div className="update">
+        <div className="horizontal-line" />
+        <div className="update-progress">
+          <p className="current">CURRENT CHAPTER</p>
+          <p className="chapter">Chapter 3: &quot;A lesson learned &quot;</p>
+          <button type="button" className="btn-chapter">UPDATE PROGRESS</button>
         </div>
       </div>
     </section>
