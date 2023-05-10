@@ -10,7 +10,7 @@ const Books = () => {
 
   useEffect(() => {
     dispatch(getBookItems());
-  }, []);
+  }, [dispatch]);
 
   return (
     <main className="main">
